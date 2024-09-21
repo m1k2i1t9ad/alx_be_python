@@ -6,19 +6,18 @@ priority = input("Priority (high/medium/low): ").strip().lower()
 time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
 
 # Initialize the reminder message
-reminder_message = ""
+reminder_message = "Reminder: "
 
 # Process the Task Based on Priority and Time Sensitivity
 match priority:
     case 'high':
-        reminder_message = f"'{task}' is a high priority task."
+        reminder_message += f"'{task}' is a high priority task."
     case 'medium':
-        reminder_message = f"'{task}' is a medium priority task."
+        reminder_message += f"'{task}' is a medium priority task."
     case 'low':
-        reminder_message = f"'{task}' is a low priority task."
+        reminder_message += f"'{task}' is a low priority task."
     case _:
-        reminder_message = "Invalid priority level entered."
-        print(reminder_message)
+        print("Invalid priority level entered.")
         exit()
 
 # Determine if the task is time-bound and modify the reminder
